@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src ="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<meta property="og:type" content="website">
+
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="150">
+<meta property="og:image:height" content="150">
+<meta property="og:title" content="AL MARKAZ MAQSOOD-UL-ULOOM">
+<meta property="og:description" content="Khatam Control!">
+<meta property="og:image:alt" content="Markaz Logo">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5407E0">
+<meta name="description" content="AL MARKAZ MAQSOOD-UL-ULOOM!"><!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+    rel="stylesheet"
+  /> --><link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/script.js" as="script">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css1/all.css">
+  <title>Markaz</title>
+  
+ <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_eedf9591a95aca12242ed694f1d663c04'
+    });
+</script>
+</head>
+
+
+  <body onload = "get()">
+
+    <header>
+    <div class="nav-wrapper">
+      <nav class="main-nav row-2">
+        <img src="images/ismailLogoCortado.png" class="logo" alt="Producer Logo">
+
+        <ul class="main-nav-links">
+          <!--<li><a class="js-normal_link" href="#">Create</a></li>-->
+          <li><a class="js-normal_link" href="#notes-section">Website Info</a></li>
+          </ul>
+          <div class="menu-container">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+      </nav>
+    </div>
+        <div class="hero-wrapper row-2">
+          <div class="hero-box">
+            <div class="hero-and-actions"><h1 class="hero-text">AL MARKAZ MAQSOOD-UL-ULOOM<span class="breaker"></span></h1>
+              
+              <div class="hero-actions">
+                <a class="btn notes-plus" href="#notes-section">Khatam de Qur'an</a>
+                </div>
+              </div>
+              <figure class="productivity-wrapper">
+                <img src="images/readingquranorg.jpg" style="max-width:100%" class="producer-character" alt="Producer Main Character">
+              </figure>
+              <div class="take-tour-wrapper row">
+                  <figure class="tour-wrapper">
+                  <img src="images/take-a-tour.svg" style="max-width:100%" class="take-tour" alt="Take a Tour">
+                  </figure>
+              </div>
+            </div>
+          </div>
+          
+        </header>
+
+        <main>
+         <div id="google_translate_element"></div> 
+      
+    <script type="text/javascript"> 
+        function googleTranslateElementInit() { 
+            new google.translate.TranslateElement(
+                {pageLanguage: 'pt'}, 
+                'google_translate_element'
+            ); 
+        } 
+    </script> 
+      
+    <script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+        cb=googleTranslateElementInit">
+    </script>
+
+  
+
+
+          <section id="read-me" class="read-me-section">
+                <h2>Partilhar</h2>
+                <div class="row">
+                  <p>Clique no botão de partilhar, para enviar o link para o whatsapp para que as famílias e amigos       possam actualizar a página.
+                    
+                    </p>
+                    
+                  </div>
+                </section>
+
+                <section id="read-me" class="read-me-section">
+                <h2>Gravar</h2>
+                <div class="row">
+                  
+                    <p>Preencha no nome do leitor, depois clique no gravar
+                              </p>
+                    
+                  </div>
+                </section>
+
+
+          <section id="choose" class="choose-an-app">
+            <section id="notes-app" class="app notes-app">
+              <legend></legend>
+
+
+               <fieldset>
+                 <legend>Informação do Khatam</legend>
+                 <p>Nome da Pessoa para fazer o Khatam:</p>
+                  <input autocomplete="off" type="text"  id = "marhoom">
+                  <button onclick = "writeNameKhatam()">Gravar</button>
+               </fieldset>
+             
+               <fieldset>
+                 <legend>Registo</legend>
+                 <p>Registados <b id="isOutput">0</b> dos 30 Siparas</p>
+               </fieldset>
+
+               
+
+              
+               <fieldset>
+                <table>
+                  <tr>
+                    <td>Para</td>
+                    <td>Leitor</td>
+                  </tr> 
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item1" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn1" onclick = "writeData1()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item2" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn2" onclick = "writeData2()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item3" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn3" onclick = "writeData3()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item4" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn4" onclick = "writeData4()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item5" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn5" onclick = "writeData5()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item6" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn6" onclick = "writeData6()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+
+
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item7" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn7" onclick = "writeData7()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item8" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn8" onclick = "writeData8()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>9 *</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item9" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn9" onclick = "writeData9()">Gravar</button>
+                    </td>
+                  </tr>
+
+                    
+
+
+                   
+                  <tr>
+                    <td>10</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item10" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn10" onclick = "writeData10()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>11</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item11" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn11" onclick = "writeData11()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>12</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item12" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn12" onclick = "writeData12()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>13 *</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item13" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn13" onclick = "writeData13()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>14 *</td>
+                     <td>
+                      <form>
+                           <input autocomplete="off" id="item14" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn14" onclick = "writeData14()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>15 *</td>
+                     <td>
+                      <form>
+                           <input autocomplete="off" id="item15" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn15" onclick = "writeData15()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>16 *</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item16" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn16" onclick = "writeData16()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>17 *</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item17" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn17" onclick = "writeData17()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>18</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item18" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn18" onclick = "writeData18()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>19 **</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item19" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn19" onclick = "writeData19()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>20</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item20" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn20" onclick = "writeData20()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>21 *</td>
+                   <td>
+                      <form>
+                           <input autocomplete="off" id="item21" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn21" onclick = "writeData21()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>22</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item22" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn22" onclick = "writeData22()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>23 *</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item23" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn23" onclick = "writeData23()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>24 *</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item24" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn24" onclick = "writeData24()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>25</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item25" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn25" onclick = "writeData25()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>26</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item26" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn26" onclick = "writeData26()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>27 *</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item27" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn27" onclick = "writeData27()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>28</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item28" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn28" onclick = "writeData28()">Gravar</button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>29</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item29" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn29" onclick = "writeData29()">Gravar</button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>30 **</td>
+                    <td>
+                      <form>
+                           <input autocomplete="off" id="item30" type="text">
+                      </form>
+                    </td> 
+                    <td>
+                       <button id="btn30" onclick = "writeData30()">Gravar</button>
+                    </td>
+                  </tr>
+
+                </table>  
+
+                </fieldset>
+
+
+                <h2>Partilhar or Reiniciar</h2>
+                   <ul>
+
+                    
+                         <!--<button type="button" id = "reset" style="background-color: red">Reset Khatam</button>-->
+                          <button type="button"style="background-color: red" id="alert" onclick="displayAlert()">Reset</button>
+
+                          
+                        <button class = "buttonShare"><i class="fab fa-whatsapp"></i>Share<a href="whatsapp://send?">
+                         </button></a>   
+                    </ul>
+
+            
+              </section>
+
+              
+            </section>
+
+
+
+
+            <section id="read-me" class="read-me-section">
+                <h2>Nota:</h2>
+                <div class="row">
+                  <p>O * representa  o número de Sajdaahs no para!
+                     JazakAllah!
+    
+                    </p>
+                    
+                  </div>
+                </section>
+
+            </main>
+              <footer class="footer">
+                <div class="lets-go-up"><p>Let's go up!</p>
+                </div>
+                <figure class="go-up-wrapper">
+                  <img class="go-up" src="images/Go-up.svg" alt="Go Up">
+                </figure>
+                <h2>It Ends Here</h2>
+                <p>Powered By: AL MARKAZ MAQSOOD-UL-ULOOM. &copy; All rights reserved.</p>
+              </footer>
+              <script src="js/script.js"></script>
+                
+                  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+ 
+                <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+                <!-- Add Firebase products that you want to use -->
+                <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>      
+
+                          <script>
+                            // Your web app's Firebase configuration
+                            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                            var firebaseConfig = {
+                              apiKey: "AIzaSyBcQkYWI0A2rfafhuOWrAI7AFu0_9h88MQ",
+                              authDomain: "khatammarkaz-13631.firebaseapp.com",
+                              databaseURL: "https://khatammarkaz-13631-default-rtdb.firebaseio.com",
+                              projectId: "khatammarkaz-13631",
+                              storageBucket: "khatammarkaz-13631.appspot.com",
+                              messagingSenderId: "636555458321",
+                              appId: "1:636555458321:web:7eb6c5534aeb30b4cafeb0",
+                              measurementId: "G-WJ90YQQY08"
+                            };
+                             firebase.initializeApp(firebaseConfig);
+
+                             //escrever na base de dados firebase - Inserir dados
+                              var count = 0;
+
+                            function writeData1(){
+                               firebase.database().ref("Leitor1").set({
+                               name1: document.getElementById("item1").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                                   
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData1()
+                             {
+                                firebase.database().ref('Leitor1').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name1 = snapshot.val().name1;
+                                         addItemsToList1(name1);
+                                          count=count+1;
+                                          document.getElementById("isOutput").innerHTML = count;
+                                          document. getElementById("item1"). disabled = true;
+                                          document. getElementById("btn1"). disabled = true;
+                                        
+                                      }
+                                      );
+                                });
+                                
+                                 
+                             } 
+                              
+                              function addItemsToList1(name1)
+                             {
+                              var output1 = document.getElementById('item1');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op1 = output1.innerHTML = ''+name1;
+                                 
+                                output1.value = op1;
+
+                            }
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData2(){
+                               firebase.database().ref("Leitor2").set({
+                               name2: document.getElementById("item2").value
+                              });
+                                       
+                                   console.log("Adicionado");
+                                    
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData2()
+                             {
+                                firebase.database().ref('Leitor2').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name2 = snapshot.val().name2;
+                                         addItemsToList2(name2);
+                                          count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item2"). disabled = true;
+                                          document. getElementById("btn2"). disabled = true;
+                                      }
+                                      );
+                                });
+                                
+                                 
+                             } 
+                             
+                              function addItemsToList2(name2)
+                             {
+                              var output2 = document.getElementById('item2');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op2 = output2.innerHTML = ''+name2;
+                                 
+                                output2.value = op2;
+                        
+                            }
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData3(){
+                               firebase.database().ref("Leitor3").set({
+                               name3: document.getElementById("item3").value
+                              });
+                                       
+                                   console.log("Adicionado");
+                                   console.log(count);
+                                     
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData3()
+                             {
+                                firebase.database().ref('Leitor3').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name3 = snapshot.val().name3;
+                                         addItemsToList3(name3);
+                                         count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item3"). disabled = true;
+                                          document. getElementById("btn3"). disabled = true;
+                                      }
+                                      );
+                                });
+                                
+                                 
+                             } 
+                             
+                              function addItemsToList3(name3)
+                             {
+                              var output3 = document.getElementById('item3');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op3 = output3.innerHTML = ''+name3;
+                                 
+                                output3.value = op3;
+
+                            }
+
+                              
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData4(){
+                               firebase.database().ref("Leitor4").set({
+                               name4: document.getElementById("item4").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                                    
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData4()
+                             {
+                                firebase.database().ref('Leitor4').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name4 = snapshot.val().name4;
+                                         addItemsToList4(name4);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item4"). disabled = true;
+                                          document. getElementById("btn4"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                                 
+                             } 
+                           
+                              function addItemsToList4(name4)
+                             {
+                              var output4 = document.getElementById('item4');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op4 = output4.innerHTML = ''+name4;
+                                 
+                                output4.value = op4;
+
+                            }
+
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData5(){
+                               firebase.database().ref("Leitor5").set({
+                               name5: document.getElementById("item5").value
+                              });
+                                    
+                                   console.log("Adicionado");
+                                   
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData5()
+                             {
+                                firebase.database().ref('Leitor5').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name5 = snapshot.val().name5;
+                                         addItemsToList5(name5);
+                                         count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item5"). disabled = true;
+                                          document. getElementById("btn5"). disabled = true;
+                                      }
+                                      );
+                                });
+                                
+                                 
+                             } 
+                            
+                              function addItemsToList5(name5)
+                             {
+                              var output5 = document.getElementById('item5');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op5 = output5.innerHTML = ''+name5;
+                                 
+                                output5.value = op5;
+
+                            }
+
+
+                             //escrever na base de dados firebase - Inserir dados
+
+                            function writeData6(){
+                               firebase.database().ref("Leitor6").set({
+                               name6: document.getElementById("item6").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData6()
+                             {
+                                firebase.database().ref('Leitor6').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name6 = snapshot.val().name6;
+                                         addItemsToList6(name6);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item6"). disabled = true;
+                                          document. getElementById("btn6"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                            
+                              function addItemsToList6(name6)
+                             {
+                              var output6 = document.getElementById('item6');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op6 = output6.innerHTML = ''+name6;
+                                 
+                                output6.value = op6;
+
+                            }
+
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData7(){
+                               firebase.database().ref("Leitor7").set({
+                               name7: document.getElementById("item7").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData7()
+                             {
+                                firebase.database().ref('Leitor7').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name7 = snapshot.val().name7;
+                                         addItemsToList7(name7);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item7"). disabled = true;
+                                          document. getElementById("btn7"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                            
+                            
+                              function addItemsToList7(name7)
+                             {
+                              var output7 = document.getElementById('item7');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op7 = output7.innerHTML = ''+name7;
+                                 
+                                output7.value = op7;
+
+                            }
+
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData8(){
+                               firebase.database().ref("Leitor8").set({
+                               name8: document.getElementById("item8").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData8()
+                             {
+                                firebase.database().ref('Leitor8').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name8 = snapshot.val().name8;
+                                         addItemsToList8(name8);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item8"). disabled = true;
+                                          document. getElementById("btn8"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                            
+                              function addItemsToList8(name8)
+                             {
+                              var output8 = document.getElementById('item8');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op8 = output8.innerHTML = ''+name8;
+                                 
+                                output8.value = op8;
+
+                            }
+
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData9(){
+                               firebase.database().ref("Leitor9").set({
+                               name9: document.getElementById("item9").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData9()
+                             {
+                                firebase.database().ref('Leitor9').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name9 = snapshot.val().name9;
+                                         addItemsToList9(name9);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item9"). disabled = true;
+                                          document. getElementById("btn9"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                            
+                            
+                              function addItemsToList9(name9)
+                             {
+                              var output9 = document.getElementById('item9');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op9 = output9.innerHTML = ''+name9;
+                                 
+                                output9.value = op9;
+
+                            }
+
+                            //escrever na base de dados firebase - Inserir dados
+
+                            function writeData10(){
+                               firebase.database().ref("Leitor10").set({
+                               name10: document.getElementById("item10").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData10()
+                             {
+                                firebase.database().ref('Leitor10').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name10 = snapshot.val().name10;
+                                         addItemsToList10(name10);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item10"). disabled = true;
+                                          document. getElementById("btn10"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+
+
+                              function addItemsToList10(name10)
+                             {
+                              var output10 = document.getElementById('item10');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op10 = output10.innerHTML = ''+name10;
+                                 
+                                output10.value = op10;
+
+                            }
+
+
+                            function writeData11(){
+                               firebase.database().ref("Leitor11").set({
+                               name11: document.getElementById("item11").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData11()
+                             {
+                                firebase.database().ref('Leitor11').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name11 = snapshot.val().name11;
+                                         addItemsToList11(name11);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item11"). disabled = true;
+                                          document. getElementById("btn11"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList11(name11)
+                             {
+                              var output11 = document.getElementById('item11');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op11 = output11.innerHTML = ''+name11;
+                                 
+                                output11.value = op11;
+
+                            }
+
+
+                            function writeData12(){
+                               firebase.database().ref("Leitor12").set({
+                               name12: document.getElementById("item12").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData12()
+                             {
+                                firebase.database().ref('Leitor12').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name12 = snapshot.val().name12;
+                                         addItemsToList12(name12);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item12"). disabled = true;
+                                          document. getElementById("btn12"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList12(name12)
+                             {
+                              var output12 = document.getElementById('item12');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op12 = output12.innerHTML = ''+name12;
+                                 
+                                output12.value = op12;
+
+                            }
+
+
+                            function writeData13(){
+                               firebase.database().ref("Leitor13").set({
+                               name13: document.getElementById("item13").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData13()
+                             {
+                                firebase.database().ref('Leitor13').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name13 = snapshot.val().name13;
+                                         addItemsToList13(name13);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item13"). disabled = true;
+                                          document. getElementById("btn13"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                            
+                              function addItemsToList13(name13)
+                             {
+                              var output13 = document.getElementById('item13');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op13 = output13.innerHTML = ''+name13;
+                                 
+                                output13.value = op13;
+
+                            }
+
+
+                            function writeData14(){
+                               firebase.database().ref("Leitor14").set({
+                               name14: document.getElementById("item14").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData14()
+                             {
+                                firebase.database().ref('Leitor14').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name14 = snapshot.val().name14;
+                                         addItemsToList14(name14);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item14"). disabled = true;
+                                          document. getElementById("btn14"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList14(name14)
+                             {
+                              var output14 = document.getElementById('item14');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op14 = output14.innerHTML = ''+name14;
+                                 
+                                output14.value = op14;
+
+                            }
+
+
+                            function writeData15(){
+                               firebase.database().ref("Leitor15").set({
+                               name15: document.getElementById("item15").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData15()
+                             {
+                                firebase.database().ref('Leitor15').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name15 = snapshot.val().name15;
+                                         addItemsToList15(name15);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item15"). disabled = true;
+                                          document. getElementById("btn15"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList15(name15)
+                             {
+                              var output15 = document.getElementById('item15');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op15 = output15.innerHTML = ''+name15;
+                                 
+                                output15.value = op15;
+
+                            }
+
+
+                            function writeData16(){
+                               firebase.database().ref("Leitor16").set({
+                               name16: document.getElementById("item16").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData16()
+                             {
+                                firebase.database().ref('Leitor16').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name16 = snapshot.val().name16;
+                                         addItemsToList16(name16);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item16"). disabled = true;
+                                          document. getElementById("btn16"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList16(name16)
+                             {
+                              var output16 = document.getElementById('item16');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op16 = output16.innerHTML = ''+name16;
+                                 
+                                output16.value = op16;
+
+                            }
+
+
+                            function writeData17(){
+                               firebase.database().ref("Leitor17").set({
+                               name17: document.getElementById("item17").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData17()
+                             {
+                                firebase.database().ref('Leitor17').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name17 = snapshot.val().name17;
+                                         addItemsToList17(name17);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item17"). disabled = true;
+                                          document. getElementById("btn17"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList17(name17)
+                             {
+                              var output17 = document.getElementById('item17');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op17 = output17.innerHTML = ''+name17;
+                                 
+                                output17.value = op17;
+
+                            }
+
+
+
+                            function writeData18(){
+                               firebase.database().ref("Leitor18").set({
+                               name18: document.getElementById("item18").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData18()
+                             {
+                                firebase.database().ref('Leitor18').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name18 = snapshot.val().name18;
+                                         addItemsToList18(name18);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item18"). disabled = true;
+                                          document. getElementById("btn18"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList18(name18)
+                             {
+                              var output18 = document.getElementById('item18');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op18 = output18.innerHTML = ''+name18;
+                                 
+                                output18.value = op18;
+
+                            }
+
+
+
+                            function writeData19(){
+                               firebase.database().ref("Leitor19").set({
+                               name19: document.getElementById("item19").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData19()
+                             {
+                                firebase.database().ref('Leitor19').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name19 = snapshot.val().name19;
+                                         addItemsToList19(name19);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item19"). disabled = true;
+                                          document. getElementById("btn19"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList19(name19)
+                             {
+                              var output19 = document.getElementById('item19');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op19 = output19.innerHTML = ''+name19;
+                                 
+                                output19.value = op19;
+
+                            }
+
+
+                            function writeData20(){
+                               firebase.database().ref("Leitor20").set({
+                               name20: document.getElementById("item20").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData20()
+                             {
+                                firebase.database().ref('Leitor20').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name20 = snapshot.val().name20;
+                                         addItemsToList20(name20);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                document. getElementById("item20"). disabled = true;
+                                          document. getElementById("btn20"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList20(name20)
+                             {
+                              var output20 = document.getElementById('item20');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op20 = output20.innerHTML = ''+name20;
+                                 
+                                output20.value = op20;
+
+                            }
+
+
+                            function writeData21(){
+                               firebase.database().ref("Leitor21").set({
+                               name21: document.getElementById("item21").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData21()
+                             {
+                                firebase.database().ref('Leitor21').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name21 = snapshot.val().name21;
+                                         addItemsToList21(name21);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item21"). disabled = true;
+                                          document. getElementById("btn21"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList21(name21)
+                             {
+                              var output21 = document.getElementById('item21');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op21 = output21.innerHTML = ''+name21;
+                                 
+                                output21.value = op21;
+
+                            }
+
+
+
+                            function writeData22(){
+                               firebase.database().ref("Leitor22").set({
+                               name22: document.getElementById("item22").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData22()
+                             {
+                                firebase.database().ref('Leitor22').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name22 = snapshot.val().name22;
+                                         addItemsToList22(name22);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item22"). disabled = true;
+                                          document. getElementById("btn22"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList22(name22)
+                             {
+                              var output22 = document.getElementById('item22');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op22 = output22.innerHTML = ''+name22;
+                                 
+                                output22.value = op22;
+
+                            }
+
+
+                            function writeData23(){
+                               firebase.database().ref("Leitor23").set({
+                               name23: document.getElementById("item23").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData23()
+                             {
+                                firebase.database().ref('Leitor23').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name23 = snapshot.val().name23;
+                                         addItemsToList23(name23);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item23"). disabled = true;
+                                          document. getElementById("btn23"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList23(name23)
+                             {
+                              var output23 = document.getElementById('item23');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op23 = output23.innerHTML = ''+name23;
+                                 
+                                output23.value = op23;
+
+                            }
+
+
+                            function writeData24(){
+                               firebase.database().ref("Leitor24").set({
+                               name24: document.getElementById("item24").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData24()
+                             {
+                                firebase.database().ref('Leitor24').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name24 = snapshot.val().name24;
+                                         addItemsToList24(name24);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item24"). disabled = true;
+                                          document. getElementById("btn24"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList24(name24)
+                             {
+                              var output24 = document.getElementById('item24');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op24 = output24.innerHTML = ''+name24;
+                                 
+                                output24.value = op24;
+
+                            }
+
+
+                            
+                             function writeData25(){
+                               firebase.database().ref("Leitor25").set({
+                               name25: document.getElementById("item25").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData25()
+                             {
+                                firebase.database().ref('Leitor25').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name25 = snapshot.val().name25;
+                                         addItemsToList25(name25);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item25"). disabled = true;
+                                          document. getElementById("btn25"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                             
+                              function addItemsToList25(name25)
+                             {
+                              var output25 = document.getElementById('item25');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op25 = output25.innerHTML = ''+name25;
+                                 
+                                output25.value = op25;
+
+                            }
+
+
+                            function writeData26(){
+                               firebase.database().ref("Leitor26").set({
+                               name26: document.getElementById("item26").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData26()
+                             {
+                                firebase.database().ref('Leitor26').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name26 = snapshot.val().name26;
+                                         addItemsToList26(name26);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item26"). disabled = true;
+                                          document. getElementById("btn26"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList26(name26)
+                             {
+                              var output26 = document.getElementById('item26');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op26 = output26.innerHTML = ''+name26;
+                                 
+                                output26.value = op26;
+
+                            }
+
+
+                            function writeData27(){
+                               firebase.database().ref("Leitor27").set({
+                               name27: document.getElementById("item27").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData27()
+                             {
+                                firebase.database().ref('Leitor27').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name27 = snapshot.val().name27;
+                                         addItemsToList27(name27);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item27"). disabled = true;
+                                          document. getElementById("btn27"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList27(name27)
+                             {
+                              var output27 = document.getElementById('item27');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op27 = output27.innerHTML = ''+name27;
+                                 
+                                output27.value = op27;
+
+                            }
+
+
+                            function writeData28(){
+                               firebase.database().ref("Leitor28").set({
+                               name28: document.getElementById("item28").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData28()
+                             {
+                                firebase.database().ref('Leitor28').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name28 = snapshot.val().name28;
+                                         addItemsToList28(name28);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item28"). disabled = true;
+                                          document. getElementById("btn28"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList28(name28)
+                             {
+                              var output28 = document.getElementById('item28');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op28 = output28.innerHTML = ''+name28;
+                                 
+                                output28.value = op28;
+
+                            }
+
+
+                            function writeData29(){
+                               firebase.database().ref("Leitor29").set({
+                               name29: document.getElementById("item29").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData29()
+                             {
+                                firebase.database().ref('Leitor29').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name29 = snapshot.val().name29;
+                                         addItemsToList29(name29);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item29"). disabled = true;
+                                          document. getElementById("btn29"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                             
+                              function addItemsToList29(name29)
+                             {
+                              var output29 = document.getElementById('item29');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op29 = output29.innerHTML = ''+name29;
+                                 
+                                output29.value = op29;
+
+                            }
+
+
+                            function writeData30(){
+                               firebase.database().ref("Leitor30").set({
+                               name30: document.getElementById("item30").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllData30()
+                             {
+                                firebase.database().ref('Leitor30').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let name30 = snapshot.val().name30;
+                                         addItemsToList30(name30);
+                                        count=count+1;
+                                document.getElementById("isOutput").innerHTML = count;
+                                 document. getElementById("item30"). disabled = true;
+                                          document. getElementById("btn30"). disabled = true;
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                            
+
+
+                              function addItemsToList30(name30)
+                             {
+                              var output30 = document.getElementById('item30');
+                              var header = document.createElement('h2');
+
+                               
+
+                                op30 = output30.innerHTML = ''+name30;
+                                 
+                                output30.value = op30;
+
+                            }
+
+
+                            function writeNameKhatam(){
+                               firebase.database().ref("marhoomName").set({
+                               marhoomName: document.getElementById("marhoom").value
+                              });
+                                        
+                                   console.log("Adicionado");
+                        }
+//Buscar dados da base de dados e mandar por parametro para vizualizar
+                       function fetchAllDataMarhoom()
+                             {
+                                firebase.database().ref('marhoomName').once('value', function(snapshot){
+                                    snapshot.forEach(
+                                      function(Snapshot){
+                                         let marhoomName = snapshot.val().marhoomName;
+                                         addItemsToListMarhoom(marhoomName);
+                                        
+                                      }
+                                      );
+                                });
+                                 
+                             } 
+                             
+                              window.onload(fetchAllData1(),fetchAllData2(),fetchAllData3(),fetchAllData4(),fetchAllData5(),fetchAllData6(),fetchAllData7(),fetchAllData8(),fetchAllData9(),fetchAllData10(),fetchAllData11(),fetchAllData12(),fetchAllData13(),fetchAllData14(),fetchAllData15(),fetchAllData16(),fetchAllData17(),fetchAllData18(),fetchAllData19(),fetchAllData20(),fetchAllData21(),fetchAllData22(),fetchAllData23(),fetchAllData24(),fetchAllData25(),fetchAllData26(),fetchAllData27(),fetchAllData28(),fetchAllData29(),fetchAllData30(),fetchAllDataMarhoom());
+                             
+                              function addItemsToListMarhoom(marhoomName)
+                             {
+                              var outputMarhoom = document.getElementById('marhoom');
+                              var header = document.createElement('h2');
+
+                               
+
+                                opMarhoom = outputMarhoom.innerHTML = ''+marhoomName;
+                                 
+                                outputMarhoom.value = opMarhoom;
+
+                            }
+
+                            function displayAlert()
+{
+        (async () => {
+           const alr = alrt.value;
+      const { value: password } = await Swal.fire({
+        title: 'Enter your password',
+        input: 'password',
+        inputLabel: 'Password',
+        inputPlaceholder: 'Enter your password',
+        inputAttributes: {
+          maxlength: 10,
+          autocapitalize: 'off',
+          autocorrect: 'off'
+        }
+      })
+
+      if (password==="Salman") {
+        Swal.fire(`Entered password: ${password} Reset Sucess :)`);
+         let userRef = firebase.database().ref('/');
+                      userRef.remove();
+                      document.getElementById("isOutput").innerHTML=0;
+                      
+       
+      }
+      else
+      {
+                      Swal.fire(`Password Incorreto! :(`);
+                     
+      }
+
+
+      })()
+
+} 
+
+
+
+
+                  
+                </script>
+
+
+  
+  		</body>
+</html>
